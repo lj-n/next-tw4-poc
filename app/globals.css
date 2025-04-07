@@ -1,26 +1,22 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-primary: black;
+  --font-sans: Arial, Helvetica, sans-serif;
+  --spacing-card: 1rem;
+  --radius-card: 0.5rem;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+[data-theme="fun"] {
+  --font-sans: "Comic Sans MS", "Comic Sans", cursive;
+  --color-primary: salmon;
+  --spacing-card: 1.5rem;
+  --radius-card: 1rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+[data-theme="corporate"] {
+  --font-sans: Arial, Helvetica, sans-serif;
+  --color-primary: black;
+  --spacing-card: 0.5rem;
+  --radius-card: 0.125rem;
 }
